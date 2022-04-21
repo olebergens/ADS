@@ -12,4 +12,13 @@ public class Element {
         this.val = val;
         this.prio = prio;
     }
+
+    @Override
+    public String toString() {
+        return "PQueue{" +
+                "elementItem.val = " + val + ", " +
+                "elementItem.prio = " + prio +
+                '}';
+    }
+
 }
