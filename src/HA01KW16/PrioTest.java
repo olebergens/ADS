@@ -4,7 +4,6 @@ public class PrioTest {
 
     PQueue pqTest;
 
-
     /**
      * Beim Aufruf des Konstruktors wird die Queue mit drei Elementen gefüllt, um die Funktionsfähigkeit zu testen.
      */
