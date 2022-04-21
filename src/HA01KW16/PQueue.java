@@ -1,6 +1,7 @@
+package HA01KW16;
+
 /**
- * Die Priority-Queue ist so aufgebaut, dass ich jedes Element nach ihrer Priorität in die Schlange einfüge.
- * Dabei ist die Schlange dann Prioritätsabwärts sortiert. Also die hächste Priorität ist das erste Element und die niedrigste Priorität ist das letzte Element.
+ * @AUTHOR: Ole Bergens, 221200097
  */
 public class PQueue {
 
@@ -18,7 +19,7 @@ public class PQueue {
     }
 
     /**
-     * @param element: Element welches in die Queue gelangen soll
+     * @param element: HA01KW16.Element welches in die Queue gelangen soll
      */
     public PQueue pqinsert(Element element) {
         PQueue pQueue = new PQueue();
@@ -46,8 +47,8 @@ public class PQueue {
     }
 
     /**
-     * @return das Front-Element der Queue (das Element mit der höchsten Priorität in der Queue)
-     * Wenn die Prioritätswarteschlange leer ist, so returne ich auch einfach null, da es ja kein front Element gibt in einer leeren Warteschlange.
+     * @return das Front-HA01KW16.Element der Queue (das HA01KW16.Element mit der höchsten Priorität in der Queue)
+     * Wenn die Prioritätswarteschlange leer ist, so returne ich auch einfach null, da es ja kein front HA01KW16.Element gibt in einer leeren Warteschlange.
      */
     public Element pqfront() {
         if (this.elementItem != null) return this.elementItem;
@@ -55,7 +56,7 @@ public class PQueue {
     }
 
     /**
-     * @return Queue ohne das Element -> das aktuelle Element mit der höchsten Priorität wird entfernt
+     * @return Queue ohne das HA01KW16.Element -> das aktuelle HA01KW16.Element mit der höchsten Priorität wird entfernt
      */
     public PQueue pqremove() {
         return null;
