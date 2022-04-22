@@ -60,7 +60,6 @@ public class PQueue {
      * TODO: ES WIRD DAS ERTE ELEMENT ENTFERNT -> BEI GLEICHER PRIO WIRD ABER DAS NEUESTE ELEMENT ENTFERNT UND NICHT DAS ÄLTESTE!
      */
     public PQueue pqremove() {
-        Element head = this.elementItem;
         Element tmp = this.elementItem;
         Element prev = null;
         while (tmp.prio == tmp.next.prio) {
