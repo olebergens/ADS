@@ -25,6 +25,7 @@ public class PrioTest {
         System.out.println(pqTest.elementItem.next.toString());
         System.out.println(pqTest.elementItem.next.next.toString());
         System.out.println("--- Ende Ausgabe Elemente in PQ ---");
+        System.out.println("Length of queue: " + pqTest.length);
         System.out.println();
     }
 
@@ -41,7 +42,6 @@ public class PrioTest {
     }
 
     void testRemove() {
-        testInsert();
         pqTest.pqremove();
         System.out.println("--- Ausgabe Queue without Element ---");
         System.out.println(pqTest.elementItem.toString());
@@ -55,8 +55,6 @@ public class PrioTest {
         prioTest.testInsert();
         // Hier testen wir ob das erste Element der Queue auch das Element ist, welches die höchste Priorität hat und als erstes hinzugefügt wurde.
         prioTest.testFront();
-        // Hier geben wir die Länge der Queue aus, um zu sehen, wie viele Elemente in der Queue sind
-        System.out.println("Length of Queue: " + prioTest.pqTest.length);
         // Hier testen wir, ob die remove-Funktion auch das Element mit der höchsten Element entfernt (seien mehrere Elemente
         // mit gleich höchster Priorität in der Queue so wird das älteste Element von diesem entfernt!)
         prioTest.testRemove();

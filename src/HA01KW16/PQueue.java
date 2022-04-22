@@ -23,7 +23,9 @@ public class PQueue {
      * @param element: Element welches in die Queue gelangen soll
      */
     public PQueue pqinsert(Element element) {
-        if (this.elementItem == null) {this.elementItem = element;}
+        if (this.elementItem == null) {
+            this.elementItem = element;
+        }
         Element elementTmp = this.elementItem;
         Element elementPrev = null;
 
