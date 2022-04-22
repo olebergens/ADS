@@ -6,7 +6,7 @@ package HA01KW16;
 public class Element {
     int val;
     int prio;
-    Element next;
+    Element next = null;
 
     public Element(int val, int prio) {
         this.val = val;
