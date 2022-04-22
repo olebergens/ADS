@@ -57,7 +57,6 @@ public class PQueue {
 
     /**
      * @return Queue ohne das Element -> das aktuelle Element mit der höchsten Priorität wird entfernt
-     * TODO: ES WIRD DAS ERTE ELEMENT ENTFERNT -> BEI GLEICHER PRIO WIRD ABER DAS NEUESTE ELEMENT ENTFERNT UND NICHT DAS ÄLTESTE!
      */
     public PQueue pqremove() {
         Element tmp = this.elementItem;
