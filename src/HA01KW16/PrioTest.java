@@ -49,6 +49,25 @@ public class PrioTest {
         System.out.println("--- Ende Ausgabe Queue without Element ---");
     }
 
+    /**
+     * Test-Output:
+     * --- Ausgabe Elemente in PQ ---
+     * PQueue{elementItem.val = 10, elementItem.prio = 30}
+     * PQueue{elementItem.val = 20, elementItem.prio = 30}
+     * PQueue{elementItem.val = 50, elementItem.prio = 20}
+     * --- Ende Ausgabe Elemente in PQ ---
+     * Length of queue: 3
+     *
+     * --- Ausgabe Front-Elemente in PQ ---
+     * PQueue{elementItem.val = 10, elementItem.prio = 30}
+     * --- Ende Ausgabe Front-Elemente in PQ ---
+     *
+     * --- Ausgabe Queue without Element ---
+     * PQueue{elementItem.val = 20, elementItem.prio = 30}
+     * PQueue{elementItem.val = 50, elementItem.prio = 20}
+     * --- Ende Ausgabe Queue without Element ---
+     * Length of Queue: 2
+     */
     public static void main(String... args) {
         PrioTest prioTest = new PrioTest();
         // Hier testen wir ob die drei Elemente in die Queue gelangt sind.
