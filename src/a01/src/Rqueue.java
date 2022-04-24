@@ -13,6 +13,6 @@ public class RQueue {
 	}
 	
 	public RQueue rqinsert(Element element, int prio) {
-		
+		element.prio = 
 	}
 }
