@@ -2,11 +2,12 @@ public class RQueue {
 	
 	public int length=0;
 	
+	Element head;
+	
 	public RQueue() {
 		this.head = null;
 		this.errorel = new Element();
-		
-	Element head;
+	}	
 	
 	public int length=0;
 	
