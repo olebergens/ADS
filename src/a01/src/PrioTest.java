@@ -78,6 +78,7 @@ public class PrioTest {
         PrioTest prioTest = new PrioTest();
         // Hier testen wir ob die drei Elemente in die Queue gelangt sind.
         prioTest.testInsert();
+
         // Hier testen wir ob das erste Element der Queue auch das Element ist, welches die höchste Priorität hat und als erstes hinzugefügt wurde.
         prioTest.testFront();
         // Hier testen wir, ob die remove-Funktion auch das Element mit der höchsten Element entfernt (seien mehrere Elemente
