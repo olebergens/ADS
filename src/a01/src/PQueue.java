@@ -8,11 +8,12 @@ package a01.src;
  */
 public class PQueue {
 
-    Element elementItem;
+    Element elementItem, errorel;
     public int length = 0;
 
     public PQueue() {
         this.elementItem = null;
+        this.errorel = new Element();
     }
 
     /**
@@ -100,7 +101,7 @@ public class PQueue {
      */
     public Element pqfront() {
         if (this.elementItem != null) return this.elementItem;
-        return new Element();
+        return errorel;
     }
 
     /**
