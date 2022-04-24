@@ -2,10 +2,14 @@ package a01.src;
 
 /**
  * @AUTHOR: Ole Bergens, 221200097
+ * @AUTHOR: Blazej Schott, 221200610
+ * @AUTHOR: Antonin Gräser, 221201792
+ * @AUTHOR: Nils Martin, 221202136
  */
 public class PQueue {
 
     Element elementItem;
+    public int length = 0;
 
     public PQueue() {
         this.elementItem = null;
@@ -22,8 +26,9 @@ public class PQueue {
      * @param element: Element welches in die Queue gelangen soll
      */
     public PQueue pqinsert(Element element) {
-        PQueue pQueue = new PQueue();
-        if (this.elementItem == null) this.elementItem = element;
+        if (this.elementItem == null) {
+            this.elementItem = element;
+        }
         Element elementTmp = this.elementItem;
         Element elementPrev = null;
 
@@ -33,8 +38,7 @@ public class PQueue {
         }
 
         if (elementTmp == null) {
-            assert elementPrev != null;
-            elementPrev.next = element;
+            if (elementPrev != null) elementPrev.next = element;
         } else if (elementPrev == null) {
             element.next = this.elementItem;
             this.elementItem = element;
@@ -42,8 +46,8 @@ public class PQueue {
             element.next = elementTmp;
             elementPrev.next = element;
         }
-        pQueue.elementItem = this.elementItem;
-        return pQueue;
+         this.length++;
+        return this;
     }
 
     /**
@@ -60,7 +64,18 @@ public class PQueue {
      * @return Queue ohne das Element -> das aktuelle Element mit der höchsten Priorität wird entfernt
      */
     public PQueue pqremove() {
-        return null;
+        Element tmp = this.elementItem;
+        Element prev = null;
+        while (tmp.prio == tmp.next.prio) {
+            prev = tmp;
+            tmp = tmp.next;
+        }
+        assert prev != null;
+        prev.next = tmp;
+        this.elementItem = prev;
+        this.elementItem = this.elementItem.next;
+        this.length--;
+        return this;
     }
 
 }
