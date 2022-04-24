@@ -41,11 +41,11 @@ public class RQTest {
 
 
     public static void main(String... args) {
-        PrioTest prioTest = new PrioTest();
-        prioTest.testInsert();
+        RQTest rq = new RQTest();
+        rq.testInsert();
 
-        prioTest.testFront();
-        prioTest.testRemove();
-        System.out.println("Length of Queue: " + prioTest.rqTest.length);
+        rq.testFront();
+        rq.testRemove();
+        System.out.println("Length of Queue: " + rq.rqTest.length);
     }
 }
