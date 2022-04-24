@@ -51,8 +51,10 @@ public class RQueue {
 	}
 	
 	public RQueue rqremove() {
+		Element tmp = rqfront();
+		Element prev = this.head;
+		while(tmp != prev.next) prev = prev.next;
 		
+		prev.next = tmp.next;
 	}
 	}
-=======
-}
