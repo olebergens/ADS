@@ -11,6 +11,8 @@ public class Element {
     int prio;
     Element next = null;
 
+    public Element() {}
+
     public Element(int val, int prio) {
         this.val = val;
         this.prio = prio;
