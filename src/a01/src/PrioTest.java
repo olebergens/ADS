@@ -15,9 +15,9 @@ public class PrioTest {
      */
     public PrioTest() {
         this.pqTest = new PQueue();
-        pqTest.pqinsert(new Element(50, 20));
-        pqTest.pqinsert(new Element(20, 30));
-        pqTest.pqinsert(new Element(10, 30));
+        pqTest.pqinsert(50, 20);
+        pqTest.pqinsert(20, 30);
+        pqTest.pqinsert(10, 30);
     }
 
     /**
