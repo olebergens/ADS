@@ -64,4 +64,4 @@ public class RQueue {
 		prev.next = tmp.next;
 		return this;
 	}
-	}
+}
