@@ -26,11 +26,11 @@ public class PQueue {
      * @param element: Element welches in die Queue gelangen soll
      */
     public PQueue pqinsert(Element element) {
-        if (elementItem == null) {
-            elementItem = element;
+        if (this.elementItem == null) {
+            this.elementItem = element;
             return this;
         }
-        Element tmp = elementItem;
+        Element tmp = this.elementItem;
         Element prev = null;
 
         while (tmp != null && tmp.prio > element.prio) {
@@ -45,8 +45,8 @@ public class PQueue {
                 element.next = tmp;
                 prev.next = element;
             } else { // Case 2: alle Elemente haben eine kleinere Priorität als das einzufügende Element -> das einzufügende Element wird am start eingesetzt
-                element.next = elementItem;
-                elementItem = element;
+                element.next = this.elementItem;
+                this.elementItem = element;
             }
         else  // Case 3: kein Element hat eine kleinere Priorität als dieses Element
             prev.next = element;
