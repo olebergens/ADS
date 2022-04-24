@@ -1,14 +1,14 @@
 public class RQueue {
 	
-	Element Null;
+	Element head;
 	
 	public int length=0;
 	
 	public RQueue() {
-		this.Null = null;	
+		this.head = null;	
 	}
 	
-	public RQueue rqempty() {		//Durch Konstruktorimplementierung überflüssig
+	public RQueue rqempty() {		//Durch Konstruktorimplementierung Ã¼berflÃ¼ssig
 		return new RQueue();
 	}
 	
