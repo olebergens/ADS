@@ -1,4 +1,4 @@
-package HA01KW16;
+package a01.src;
 
 public class PrioTest {
 

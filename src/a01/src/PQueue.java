@@ -1,4 +1,4 @@
-package HA01KW16;
+package a01.src;
 
 /**
  * @AUTHOR: Ole Bergens, 221200097
