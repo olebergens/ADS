@@ -26,34 +26,37 @@ public class PQueue {
      * @param element: Element welches in die Queue gelangen soll
      */
     public PQueue pqinsert(Element element) {
-        if (this.elementItem == null) {
-            this.elementItem = element;
+        if (elementItem == null) {
+            elementItem = element;
+            return this;
         }
-        Element elementTmp = this.elementItem;
-        Element elementPrev = null;
+        Element tmp = elementItem;
+        Element prev = null;
+        while (tmp != null && tmp.prio > element.prio) {
+            prev = tmp;
+            tmp = tmp.next;
+        }
 
-        while (elementTmp != null && elementTmp.prio > element.prio) {
-            elementPrev = elementTmp;
-            elementTmp = elementTmp.next;
+        // Hier gibts jetzt die verschiedensten kleinen feinen Unterschiede
+        if (tmp == null)  // Case 1: kein Element hat eine kleinere Priorität als dieses Element
+            prev.next = element;
+        else {
+            if (prev == null) { // Case 2: alle Elemente haben eine kleinere Priorität als das einzufügende ELement -> das einzufügende Element wird am start eingesetzt
+                element.next = elementItem;
+                elementItem = element;
+            } else { // Case 3: das Element wird vor dem Element eingefügt welches eine kleinere Priorität als das einzufügende Element hat
+                element.next = tmp;
+                prev.next = element;
+            }
         }
-
-        if (elementTmp == null) {
-            if (elementPrev != null) elementPrev.next = element;
-        } else if (elementPrev == null) {
-            element.next = this.elementItem;
-            this.elementItem = element;
-        } else {
-            element.next = elementTmp;
-            elementPrev.next = element;
-        }
-         this.length++;
+        this.length++;
         return this;
     }
 
     /**
      * @return das Front-Element der Queue (das Element mit der höchsten Priorität in der Queue)
      * Aufgabe 1c)
-     *  Wenn die Prioritätswarteschlange leer ist, so returne ich auch einfach null, da es ja kein front Element gibt in einer leeren Warteschlange.
+     * Wenn die Prioritätswarteschlange leer ist, so returne ich auch einfach null, da es ja kein front Element gibt in einer leeren Warteschlange.
      */
     public Element pqfront() {
         if (this.elementItem != null) return this.elementItem;

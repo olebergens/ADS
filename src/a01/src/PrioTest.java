@@ -30,6 +30,7 @@ public class PrioTest {
         System.out.println(pqTest.elementItem.toString());
         System.out.println(pqTest.elementItem.next.toString());
         System.out.println(pqTest.elementItem.next.next.toString());
+       // pqTest.elementItem.next.next.next = null;
         System.out.println("--- Ende Ausgabe Elemente in PQ ---");
         System.out.println("Length of queue: " + pqTest.length);
         System.out.println();
