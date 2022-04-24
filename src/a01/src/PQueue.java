@@ -41,12 +41,13 @@ public class PQueue {
         if (tmp == null)  // Case 1: kein Element hat eine kleinere Priorität als dieses Element
             prev.next = element;
         else {
-            if (prev == null) { // Case 2: alle Elemente haben eine kleinere Priorität als das einzufügende ELement -> das einzufügende Element wird am start eingesetzt
-                element.next = elementItem;
-                elementItem = element;
-            } else { // Case 3: das Element wird vor dem Element eingefügt welches eine kleinere Priorität als das einzufügende Element hat
+            // Case 2: das Element wird vor dem Element eingefügt welches eine kleinere Priorität als das einzufügende Element hat
+            if (prev != null) {
                 element.next = tmp;
                 prev.next = element;
+            } else { // Case 3: alle Elemente haben eine kleinere Priorität als das einzufügende Element -> das einzufügende Element wird am start eingesetzt
+                element.next = elementItem;
+                elementItem = element;
             }
         }
         this.length++;
