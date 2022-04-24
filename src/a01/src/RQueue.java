@@ -12,30 +12,25 @@ public class RQueue {
 	
 	public int length=0;
 	
-	Element head;
+	Element head, errorel;
 	
 	public RQueue() {
 		this.head = null;
 		this.errorel = new Element();
 	}	
-	
-	public int length=0;
-	
-	public RQueue() {
-		this.head = null;	
-	}
-	
+
 	public RQueue rqempty() {		//Durch Konstruktorimplementierung überflüssig
 		return new RQueue();
 	}
 	
 	public RQueue rqinsert(int element, int prio) {
-		Element insertion;
+		Element insertion = new Element();
 		insertion.prio = prio;
 		insertion.val = element;
 		insertion.next = this.head;
 		this.head = insertion;
 		this.length++;
+		return this;
 	}
 	
 	public Element rqfront() {
@@ -67,5 +62,6 @@ public class RQueue {
 		while(tmp != prev.next) prev = prev.next;
 		
 		prev.next = tmp.next;
+		return this;
 	}
 	}

@@ -32,7 +32,7 @@ public class RQTest {
     }
 
     void testRemove() {
-        rqTest.pqremove();
+        rqTest.rqremove();
         System.out.println("--- Ausgabe Queue without Element ---");
         System.out.println(rqTest.head.toString());
         System.out.println(rqTest.head.next.toString());
