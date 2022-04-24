@@ -1,7 +1,5 @@
 package a01.src;
 
-//test
-
 /**
  * @AUTHOR: Ole Bergens, 221200097
  * @AUTHOR: Blazej Schott, 221200610
