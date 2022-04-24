@@ -1,20 +1,14 @@
 package a01.src;
 
-/**
- * @AUTHOR: Ole Bergens, 221200097
- * @AUTHOR: Blazej Schott, 221200610
- * @AUTHOR: Antonin Gräser, 221201792
- * @AUTHOR: Nils Martin, 221202136
- */
-public class PrioTest {
+public class RQTest {
 
-    PQueue pqTest;
+    RQueue rqTest;
 
     /**
      * Beim Aufruf des Konstruktors wird die Queue mit drei Elementen gefüllt, um die Funktionsfähigkeit zu testen.
      */
     public PrioTest() {
-        this.pqTest = new PQueue();
+        this.pqTest = new RQueue();
         pqTest.pqinsert(50, 20);
         pqTest.pqinsert(20, 30);
         pqTest.pqinsert(10, 30);
@@ -87,5 +81,4 @@ public class PrioTest {
         // Hier geben wir die Länge der Queue aus, um zu sehen, wie viele Elemente in der Queue sind
         System.out.println("Length of Queue: " + prioTest.pqTest.length);
     }
-
 }
