@@ -1,3 +1,4 @@
+package a01.src;
 
 /**
  * @AUTHOR: Ole Bergens, 221200097
