@@ -15,19 +15,19 @@ public class RQTest {
     }
 
     void testInsert() {
-        System.out.println("--- Ausgabe Elemente in PQ ---");
+        System.out.println("--- Ausgabe Elemente in RQ ---");
         System.out.println(rqTest.head.toString());
         System.out.println(rqTest.head.next.toString());
         System.out.println(rqTest.head.next.next.toString());
-        System.out.println("--- Ende Ausgabe Elemente in PQ ---");
+        System.out.println("--- Ende Ausgabe Elemente in RQ ---");
         System.out.println("Length of queue: " + rqTest.length);
         System.out.println();
     }
 
     void testFront() {
-        System.out.println("--- Ausgabe Front-Elemente in PQ ---");
+        System.out.println("--- Ausgabe Front-Elemente in RQ ---");
         System.out.println(rqTest.rqfront().toString());
-        System.out.println("--- Ende Ausgabe Front-Elemente in PQ ---");
+        System.out.println("--- Ende Ausgabe Front-Elemente in RQ ---");
         System.out.println();
     }
 
