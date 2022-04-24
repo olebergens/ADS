@@ -7,7 +7,7 @@ public class RQTest {
     /**
      * Beim Aufruf des Konstruktors wird die Queue mit drei Elementen gefüllt, um die Funktionsfähigkeit zu testen.
      */
-    public PrioTest() {
+    public RQTest() {
         this.rqTest = new RQueue();
         rqTest.rqinsert(50, 20);
         rqTest.rqinsert(20, 30);
