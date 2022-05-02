@@ -7,22 +7,21 @@ package a01.src;
  * @AUTHOR: Nils Martin, 221202136
  */
 
-
 public class RQueue {
-	
-	public int length=0;
-	
+
+	public int length = 0;
+
 	Element head, errorel;
-	
+
 	public RQueue() {
 		this.head = null;
 		this.errorel = new Element();
-	}	
+	}
 
-	public RQueue rqempty() {		//Durch Konstruktorimplementierung überflüssig
+	public RQueue rqempty() { // Durch Konstruktorimplementierung überflüssig
 		return new RQueue();
 	}
-	
+
 	public RQueue rqinsert(int element, int prio) {
 		Element insertion = new Element();
 		insertion.prio = prio;
@@ -32,35 +31,36 @@ public class RQueue {
 		this.length++;
 		return this;
 	}
-	
-	public Element rqfront() {
-		 Element tmp = this.head;
-		 if(head == null) {
-			 tmp = errorel;
-			}else {
-			if(head.next == null) {
-				tmp = this.head;
-			}else {
 
-		 Element runner = this.head.next;
-		 int i = 0;
-		 
-		 while(i < this.length) {
-			 if(tmp.prio <= runner.prio) {
-				 tmp = runner;
-				 i++;
-			 }
-		 }
-	}
+	public Element rqfront() {
+		Element tmp = this.head;
+		if (head == null) {
+			tmp = errorel;
+		} else {
+			if (head.next == null) {
+				tmp = this.head;
+			} else {
+
+				Element runner = this.head.next;
+				int i = 0;
+
+				while (i < this.length) {
+					if (tmp.prio <= runner.prio) {
+						tmp = runner;
+						i++;
+					}
+				}
 			}
-		 return tmp;
+		}
+		return tmp;
 	}
-	
+
 	public RQueue rqremove() {
 		Element tmp = rqfront();
 		Element prev = this.head;
-		while(tmp != prev.next) prev = prev.next;
-		
+		while (tmp != prev.next)
+			prev = prev.next;
+
 		prev.next = tmp.next;
 		return this;
 	}
