@@ -26,6 +26,14 @@ public abstract class SortingAlgorithm {
         return arr;
     }
 
+    /**
+     * Benutzung des startTimer und endTimer:
+     * vor Aufruf der sort-Funktion den timer starten.
+     * Nach Aufruf der sort-Funktion den timer stoppen und den Wert als return getten
+     * ...
+     * Profit!
+     */
+
     public void startTimer() {
         this.startTime = System.currentTimeMillis();
     }
