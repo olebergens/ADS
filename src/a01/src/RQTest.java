@@ -1,7 +1,6 @@
 package a01.src;
 
 public class RQTest {
-
     RQueue rqTest;
 
     /**
