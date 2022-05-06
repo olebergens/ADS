@@ -17,10 +17,10 @@ public class SearchSort extends SortingAlgorithm {
         for (int i = 0; i <= input.length - 2; i++) {
             pos = i;
             for (int j = i + 1; j <= input.length - 1; j++) {
-                if ((input[j] > input[pos]) == false)
+                if (!(input[j] > input[pos]))
                     pos = j;
                 }
-            tmp = input[i]; 
+            tmp = input[i];
             input[i] = input[pos];
             input[pos] = tmp;
         }

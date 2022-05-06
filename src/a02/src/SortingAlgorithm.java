@@ -10,7 +10,7 @@ public abstract class SortingAlgorithm {
 
     public int[] fillArrayWithSortedNumbersAscending(int n) {
         int[] arr = new int[n];
-        for (int i = 0; i <= n; i++) arr[i] = i;
+        for (int i = 0; i <= n - 1; i++) arr[i] = i;
         return arr;
     }
 
@@ -22,7 +22,7 @@ public abstract class SortingAlgorithm {
 
     public int[] fillArrayWithRandomNumbers(int n) {
         int[] arr = new int[n];
-        for (int i = 0; i <= n; i++) arr[i] = new Random().nextInt();
+        for (int i = 0; i <= n - 1; i++) arr[i] = new Random().nextInt();
         return arr;
     }
 
