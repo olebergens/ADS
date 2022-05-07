@@ -10,34 +10,32 @@ public abstract class SortingAlgorithm {
 
     public int[] fillArrayWithSortedNumbersAscending(int n) {
         int[] arr = new int[n];
-        for (int i = 0; i <= n; i++) arr[i] = i;
+        for (int i = 0; i <= n - 1; i++) arr[i] = i;
         return arr;
     }
 
     public int[] fillArrayWithSortedNumbersDescend(int n) {
         int[] arr = new int[n];
-        for (int i = n; i >= 0; i--) arr[n - i] = i;
+        for (int i = n; i > 0; i--) arr[n - i] = i;
         return arr;
     }
 
     public int[] fillArrayWithRandomNumbers(int n) {
         int[] arr = new int[n];
-        for (int i = 0; i <= n; i++) arr[i] = new Random().nextInt();
+        for (int i = 0; i <= n - 1; i++) arr[i] = new Random().nextInt();
         return arr;
     }
 
     /**
-     * Benutzung des startTimer und endTimer:
-     * vor Aufruf der sort-Funktion den timer starten.
-     * Nach Aufruf der sort-Funktion den timer stoppen und den Wert als return getten
-     * ...
-     * Profit!
+     * startet den Timer. Variable wird auf jetzige Zeit Millisekunden gesetzt.
      */
-
     public void startTimer() {
         this.startTime = System.currentTimeMillis();
     }
 
+    /**
+     * @return Sekundenanzahl zwischen Zeitverschiebung der Aufrufe.
+     */
     public double endTimer() {
         return (System.currentTimeMillis() - this.startTime) / 1000d;
     }
