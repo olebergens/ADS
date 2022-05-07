@@ -25,4 +25,22 @@ public class SearchSort extends SortingAlgorithm {
             input[pos] = tmp;
         }
     }
+
+
+    public void test(SortingAlgorithm sortingAlgorithm) {
+
+    }
+
+    public void test1(){
+        test(new SearchSort());
+    }
+
+    public static void main(String... args) {
+        SortTest sortTest = new SortTest();
+        System.out.println("Starting testing shellsort");
+        sortTest.startTest(new ShellSort());
+        System.out.println("Starting testing searchsort");
+        sortTest.startTest(new SearchSort());
+    }
+
 }

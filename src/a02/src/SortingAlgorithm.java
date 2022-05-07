@@ -16,7 +16,7 @@ public abstract class SortingAlgorithm {
 
     public int[] fillArrayWithSortedNumbersDescend(int n) {
         int[] arr = new int[n];
-        for (int i = n; i >= 0; i--) arr[n - i] = i;
+        for (int i = n; i > 0; i--) arr[n - i] = i;
         return arr;
     }
 
@@ -26,10 +26,16 @@ public abstract class SortingAlgorithm {
         return arr;
     }
 
+    /**
+     * startet den Timer. Variable wird auf jetzige Zeit Millisekunden gesetzt.
+     */
     public void startTimer() {
         this.startTime = System.currentTimeMillis();
     }
 
+    /**
+     * @return Sekundenanzahl zwischen Zeitverschiebung der Aufrufe.
+     */
     public double endTimer() {
         return (System.currentTimeMillis() - this.startTime) / 1000d;
     }
