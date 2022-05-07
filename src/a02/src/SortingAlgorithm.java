@@ -8,19 +8,19 @@ public abstract class SortingAlgorithm {
 
     public abstract void sort(int[] inputArray);
 
-    public int[] fillArrayWithSortedNumbersAscending(int n) {
+    public static int[] fillArrayWithSortedNumbersAscending(int n) {
         int[] arr = new int[n];
         for (int i = 0; i <= n - 1; i++) arr[i] = i;
         return arr;
     }
 
-    public int[] fillArrayWithSortedNumbersDescend(int n) {
+    public static int[] fillArrayWithSortedNumbersDescend(int n) {
         int[] arr = new int[n];
         for (int i = n; i > 0; i--) arr[n - i] = i;
         return arr;
     }
 
-    public int[] fillArrayWithRandomNumbers(int n) {
+    public static int[] fillArrayWithRandomNumbers(int n) {
         int[] arr = new int[n];
         for (int i = 0; i <= n - 1; i++) arr[i] = new Random().nextInt();
         return arr;
