@@ -15,7 +15,7 @@ public class BubbleSort extends SortingAlgorithm {
         int fin,tmp;
         while(fin==0) {
         	fin = 1;
-        	for(int i = 0; i < input.length; i++) {
+        	for(int i = 0; i < (input.length-1); i++) {
         		if(input[i] < input[i+1]) {
         			fin = 0;
         			tmp = input[i];
