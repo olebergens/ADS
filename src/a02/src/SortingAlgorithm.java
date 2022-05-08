@@ -44,7 +44,7 @@ public abstract class SortingAlgorithm {
      * @return Sekundenanzahl zwischen Zeitverschiebung der Aufrufe.
      */
     public double endTimer() {
-        return (System.currentTimeMillis() - this.startTime) / 1000d;
+        return (System.currentTimeMillis() - this.startTime) / 1000D;
     }
 
 }
