@@ -7,13 +7,12 @@
 
 package a02.src;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.util.Arrays;
 
 public class SortTest {
 
-    public void startTest(@NotNull SortingAlgorithm sortingAlgorithm) {
+    public void startTest( SortingAlgorithm sortingAlgorithm) {
+        assert sortingAlgorithm != null;
         double endTime = 0, measureTime = 0;
 
         // Random-Number-Array
