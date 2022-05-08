@@ -17,6 +17,9 @@ public class Starting {
         System.out.println("----- START TESTING SEARCHSORT -----");
         sortTest.startTest(new SearchSort());
         System.out.println();
+        System.out.println("----- START TESTING BUBBLESORT -----");
+        sortTest.startTest(new BubbleSort());
+        System.out.println();
         System.out.println("----- START TESTING JAVA ARRAYSORT -----");
         sortTest.startTest();
         System.out.println();

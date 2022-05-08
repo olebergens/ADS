@@ -10,6 +10,7 @@ package a02.src;
 public class BubbleSort extends SortingAlgorithm {
 //Sucht das kleinste Element im Array und speichert sie dann in pos.
 //Sollte es das kleinste Element sein, dann fügt sie das kleinste Element(input[pos]) an der i-te Stelle
+	@Override
     public void sort(int[] input) {
         int fin,tmp;
         while(fin==0) {
