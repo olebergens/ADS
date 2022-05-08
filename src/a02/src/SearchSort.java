@@ -4,7 +4,6 @@
  * @AUTHOR: Antonin Gräser, 221201792
  * @AUTHOR: Nils Martin, 221202136
  */
-
 package a02.src;
 
 public class SearchSort extends SortingAlgorithm {
