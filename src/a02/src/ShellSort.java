@@ -8,10 +8,10 @@
 package a02.src;
 
 public class ShellSort extends SortingAlgorithm {
-
     @Override
     public void sort(int[] inputArray) {
         int mid = inputArray.length / 2;
+        // könnte theoretisch auch mit einer while-schleife realisiert werden, diese Art von For-Loop sieht aber cleaner aus. (while (mid>0) {.... mid /= 2} etc.
         for (; mid > 0; mid /= 2) {
             for (int i = 0; (i + mid) < inputArray.length; i++) {
                 for (int j = 0; (j + mid) < inputArray.length; j += mid) {
