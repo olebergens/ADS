@@ -14,6 +14,9 @@ public class Test {
         moTQuicksort.quicksort(max);
         for (int i = 0; i < max.length; i++)
             System.out.println(max[i]);
+
+        SortingTest sortingTest = new SortingTest();
+        sortingTest.startTest(new MoTQuicksort());
     }
 
 }
