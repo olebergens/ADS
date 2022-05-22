@@ -44,37 +44,37 @@ public class SortingTest {
     }
 
     public void startTest(AbsQuicksort absQuicksort) {
-        int[] arr10R = SortingAlgorithm.fillArrayWithRandomNumbers(10);
+        int[] arr10R = fillArrayWithRandomNumbers(10);
         startTimer();
         absQuicksort.quicksort(arr10R);
         System.out.println("10-Randomnumbers Sort-Time: " + endTimer() + "s");
 
-        int[] arr100R = SortingAlgorithm.fillArrayWithRandomNumbers(100);
+        int[] arr100R = fillArrayWithRandomNumbers(100);
         startTimer();
         absQuicksort.quicksort(arr100R);
         System.out.println("100-Randomnumbers Sort-Time: " + endTimer() + "s");
 
-        int[] arr1000R = SortingAlgorithm.fillArrayWithRandomNumbers(1000);
+        int[] arr1000R = fillArrayWithRandomNumbers(1000);
         startTimer();
         absQuicksort.quicksort(arr1000R);
         System.out.println("1000-Randomnumbers Sort-Time: " + endTimer() + "s");
 
-        int[] arr10000R = SortingAlgorithm.fillArrayWithRandomNumbers(10000);
+        int[] arr10000R = fillArrayWithRandomNumbers(10000);
         startTimer();
         absQuicksort.quicksort(arr10000R);
         System.out.println("10000-Randomnumbers Sort-Time: " + endTimer() + "s");
 
-        int[] arr20000R = SortingAlgorithm.fillArrayWithRandomNumbers(20000);
+        int[] arr20000R = fillArrayWithRandomNumbers(20000);
         startTimer();
         absQuicksort.quicksort(arr20000R);
         System.out.println("20000-Randomnumbers Sort-Time: " + endTimer() + "s");
 
         // Number-Array-Ascend
-        int[] arr10A = SortingAlgorithm.fillArrayWithSortedNumbersAscending(10);
-        int[] arr100A = SortingAlgorithm.fillArrayWithSortedNumbersAscending(100);
-        int[] arr1000A = SortingAlgorithm.fillArrayWithSortedNumbersAscending(1000);
-        int[] arr10000A = SortingAlgorithm.fillArrayWithSortedNumbersAscending(10000);
-        int[] arr20000A = SortingAlgorithm.fillArrayWithSortedNumbersAscending(20000);
+        int[] arr10A = fillArrayWithSortedNumbersAscending(10);
+        int[] arr100A = fillArrayWithSortedNumbersAscending(100);
+        int[] arr1000A = fillArrayWithSortedNumbersAscending(1000);
+        int[] arr10000A = fillArrayWithSortedNumbersAscending(10000);
+        int[] arr20000A = fillArrayWithSortedNumbersAscending(20000);
         startTimer();
         absQuicksort.quicksort(arr10A);
         System.out.println("10-Ascendingnumbers Sort-Time: " + endTimer() + "s");
@@ -92,11 +92,11 @@ public class SortingTest {
         System.out.println("20000-Ascendingnumbers Sort-Time: " + endTimer() + "s");
 
         // Number-Array-Descending
-        int[] arr10D = SortingAlgorithm.fillArrayWithSortedNumbersDescend(10);
-        int[] arr100D = SortingAlgorithm.fillArrayWithSortedNumbersDescend(100);
-        int[] arr1000D = SortingAlgorithm.fillArrayWithSortedNumbersDescend(1000);
-        int[] arr10000D = SortingAlgorithm.fillArrayWithSortedNumbersDescend(10000);
-        int[] arr20000D = SortingAlgorithm.fillArrayWithSortedNumbersDescend(20000);
+        int[] arr10D = fillArrayWithSortedNumbersDescend(10);
+        int[] arr100D = fillArrayWithSortedNumbersDescend(100);
+        int[] arr1000D = fillArrayWithSortedNumbersDescend(1000);
+        int[] arr10000D = fillArrayWithSortedNumbersDescend(10000);
+        int[] arr20000D = fillArrayWithSortedNumbersDescend(20000);
         startTimer();
         absQuicksort.quicksort(arr10D);
         System.out.println("10-Descendingnumbers Sort-Time: " + endTimer() + "s");
