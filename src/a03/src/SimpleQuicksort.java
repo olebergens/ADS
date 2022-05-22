@@ -6,7 +6,7 @@ package a03.src;
  * @AUTHOR: Antonin Gräser, 221201792
  * @AUTHOR: Nils Martin, 221202136
  */
-public class SimpleQuicksort extends AbsQuicksort{
+public class NativeQuicksort extends AbsQuicksort{
 	@Override
     public void quicksort(int[] arr) {
     	
