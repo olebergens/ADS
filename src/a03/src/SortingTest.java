@@ -68,6 +68,7 @@ public class SortingTest {
         startTimer();
         absQuicksort.quicksort(arr20000R);
         System.out.println("20000-Randomnumbers Sort-Time: " + endTimer() + "s");
+
         // Number-Array-Ascend
         int[] arr10A = SortingAlgorithm.fillArrayWithSortedNumbersAscending(10);
         int[] arr100A = SortingAlgorithm.fillArrayWithSortedNumbersAscending(100);
