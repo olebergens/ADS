@@ -12,7 +12,7 @@ public class NativeQuicksort extends AbsQuicksort{
         quicksort(arr, 0, arr.length - 1);
     }
 	
-	int part(int[] arr, int left, int right) {
+	public static int part(int[] arr, int left, int right) {
 		int pivot = arr[left];
 		int i = left;		
 		for(int j = left; j <= right - 1; j++) {
