@@ -17,6 +17,7 @@ public class Test {
 
         SortingTest sortingTest = new SortingTest();
         sortingTest.startTest(new MoTQuicksort());
+        sortingTest.startTest(new NativeQuicksort());
     }
 
 }
