@@ -21,7 +21,7 @@ public class AVLTree {
         return (node == null) ? 0 : height(node.right) - height(node.left);
     }
 
-    private Node rotateRight(Node node) {
+    private Node rotateRight(Node node) { //Rechtsrotation
         Node leftChild = node.left;
 
         node.left = leftChild.right;
@@ -33,7 +33,7 @@ public class AVLTree {
         return leftChild;
     }
 
-    private Node rotateLeft(Node node) {
+    private Node rotateLeft(Node node) { //Linksrotation
         Node rightChild = node.right;
 
         node.right = rightChild.left;
@@ -44,35 +44,5 @@ public class AVLTree {
 
         return rightChild;
     }
-    private Node fixInsert(Node n) {
-        int balanceFactor = balanceFactor(n);
-
-        // Left-heavy?
-        if (balanceFactor < -1) {
-            if (balanceFactor(n.left) <= 0) {    // Case 1
-                // Rotate right
-                n = rotateRight(n);
-            } else {                                // Case 2
-                // Rotate left-right
-                n.left = rotateLeft(n.left);
-                n = rotateRight(n);
-            }
-        }
-
-        // Right-heavy?
-        if (balanceFactor > 1) {
-            if (balanceFactor(n.right) >= 0) {    // Case 3
-                // Rotate left
-                n = rotateLeft(n);
-            } else {                                 // Case 4
-                // Rotate right-left
-                n.right = rotateRight(n.right);
-                n = rotateLeft(n);
-            }
-        }
-
-        return n;
-    }
-
 
 }
