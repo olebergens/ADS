@@ -44,5 +44,6 @@ public class AVLTree {
 
         return rightChild;
     }
+    //Zu machen: Insert und Fixinser siehe Vorlesung!!!
 
 }
