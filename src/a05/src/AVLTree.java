@@ -8,7 +8,7 @@ package a05.src;
 
 public class AVLTree {
 
-    //private Node root;
+    private Node root;
     void updateHeight(Node node) {
         node.height = 1 + Math.max(height(node.left), height(node.right));
     }
@@ -45,6 +45,6 @@ public class AVLTree {
         return rightChild;
     }
     //Zu machen: Insert und Fixinser siehe Vorlesung!!!
-    //Zusatz_ del und fixdel
+    //Zusatzt del und fixdel
 
 }
