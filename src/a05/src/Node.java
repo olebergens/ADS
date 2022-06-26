@@ -8,10 +8,10 @@ package a05.src;
 
 public class Node {
     int value; //Wert/Schlüssel
-    int height = 0; //Höhe
+    int height; //Höhe
 
-    Node right;
-    Node left;
+    Node right = null;
+    Node left = null;
 
     public Node(int value){
         this.value = value;
