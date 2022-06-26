@@ -7,8 +7,8 @@
 package a05.src;
 
 public class Node {
-    int value; //Wert/Schlüssel
-    int height; //Höhe
+    int value;
+    int height;
 
     Node right = null;
     Node left = null;

@@ -58,15 +58,12 @@ public class AVLTree {
                 node.left = newNode;
             else
                 node.left = insert(node.left, value);
-        }
-
-        if (value > node.value) {
+        } else {
             if (node.right == null)
                 node.right = newNode;
             else
                 node.right = insert(node.right, value);
         }
-        else return node;
 
         updateHeight(node);
 
@@ -78,10 +75,10 @@ public class AVLTree {
 
         //Ist der linke Teilbaum gewachsen bzw. linkslastig?
         //Balancefaktor(node) < -1 und Balancefaktor(node.left) <= 0 oder Balancefaktor(node.left) > 0
-        if(balancefactor < -1){
-            if(balanceFactor(node.left)  <= 0)
+        if (balancefactor < -1) {
+            if (balanceFactor(node.left) <= 0)
                 rotateRight(node);  //Rechtsrotation wenn Balancefaktor(node.left) <= 0
-            else if(balanceFactor(node.left)  > 0){
+            else if (balanceFactor(node.left) > 0) {
                 node.left = rotateLeft(node); //Links- Rechtsrotation wenn Balancefaktor(node.left) > 0
                 node = rotateRight(node);
             }
@@ -89,38 +86,39 @@ public class AVLTree {
 
         //Ist der rechte Teilbaum gewachsen bzw. rechtslastig?
         //Dann ist Balancefaktor(node) > 1 und Balancefaktor(node.right) >= 0 oder Balancefaktor(node.right) < 0
-        if(balancefactor > 1){
-            if(balanceFactor(node.right) >= 0)
+        if (balancefactor > 1) {
+            if (balanceFactor(node.right) >= 0)
                 rotateLeft(node);
-            else if(balanceFactor(node.right) < 0) {
+            else if (balanceFactor(node.right) < 0) {
                 node.right = rotateRight(node.right);
                 node = rotateLeft(node);
             }
         }
+        updateHeight(node);
         return node;
     }
 
-    private Node mostLeftLeaf(Node node){
+    private Node mostLeftLeaf(Node node) {
         Node tmp = node;
 
-        while(tmp.left != null){
+        while (tmp.left != null) {
             tmp = node.left;
         }
         return tmp;
     }
 
-    public Node delete(Node node, int value){
-        if(node == null) return node;
+    public Node delete(Node node, int value) {
+        if (node == null) return node;
 
-        if(value > node.value){                      //wennn value größer als node.value ist muss er im rechten Teilbaim sein.
+        if (value > node.value) {                      //wennn value größer als node.value ist muss er im rechten Teilbaim sein.
             node.right = delete(node.right, value);
         }
 
-        if(value < node.value)                      //Hier dementsprechend im Linken.
+        if (value < node.value)                      //Hier dementsprechend im Linken.
             node.left = delete(node.left, value);
 
-        else{
-            if((node.left == null) || (node.right == null)){ //Knoten mit einen Blatt oder garkeinem
+        else {
+            if ((node.left == null) || (node.right == null)) { //Knoten mit einen Blatt oder garkeinem
                 Node tmp;
 
                 if (node.left != null) //überprüft welches Blatt null ist
@@ -128,26 +126,24 @@ public class AVLTree {
                 else
                     tmp = node.right;
 
-                if(tmp == null) {  //Überprüft ob es keine Blätter gibt
+                if (tmp == null) {  //Überprüft ob es keine Blätter gibt
                     tmp = node;
                     node = null;
-                }
-                else //Ein Blatt
+                } else //Ein Blatt
                     node = tmp;
 
                 tmp = null;
-            }
-            else {                                    //knoten mit zwei Blätter
+            } else {                                    //knoten mit zwei Blätter
                 Node tmp = mostLeftLeaf(node.right);
                 node.value = tmp.value;
                 node.right = delete(node.right, node.value);
             }
         }
-        if(node != null)
-            node = fixinsert(node);
-        else return node;
 
-        updateHeight(node);
+        if (node != null) {
+            updateHeight(node);
+            node = fixinsert(node); //fixinsert == fixdelete
+        } else return node;
 
         return node;
     }
